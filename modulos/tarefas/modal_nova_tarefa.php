@@ -15,7 +15,7 @@
     <!-- Modal Nova Tarefa -->
     <div class="modal fade" id="modalAdicionarTarefa" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <form class="modal-content" method="POST" action="../logica/controladores/adicionar_tarefa.php">
+            <form class="modal-content" method="POST" action="adicionar_tarefa.php">
 
                 <input type="hidden" name="tipo_usuario_logado" value="<?= $_SESSION['tipo_usuario'] ?>">
 

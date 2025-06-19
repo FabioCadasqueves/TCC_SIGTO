@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
 
     if ($stmt->execute()) {
-        header('Location:../../telas/tarefas.php?cadastro=sucesso');
+        header('Location: tela_tarefas.php?cadastro=sucesso');
         exit;
     } else {
         echo "Erro ao criar tarefa: " . $stmt->error;

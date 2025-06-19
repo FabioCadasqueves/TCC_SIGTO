@@ -8,7 +8,7 @@ if (!$id) {
     exit;
 }
 
-// 🚩 Aqui inclui o campo atribuido_para_tipo no SELECT
+// Aqui inclui o campo atribuido_para_tipo no SELECT
 $sql = "SELECT id, descricao, atribuido_para, atribuido_para_tipo, criticidade FROM tarefas WHERE id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $id);

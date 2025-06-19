@@ -40,7 +40,7 @@ document
   .getElementById("filtroResponsavel")
   ?.addEventListener("change", function () {
     const selectedValue = this.value;
-    window.location.href = `tarefas.php?usuario_id=${selectedValue}`;
+    window.location.href = `tela_tarefas.php?usuario_id=${selectedValue}`;
   });
 
 /* =====================================================
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
    BLOCO 4: Alterar Status (Iniciar / Concluir)
 ===================================================== */
 function alterarStatus(id, novoStatus) {
-  fetch("../logica/controladores/alterar_status.php", {
+  fetch("alterar_status.php", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: `id_tarefa=${id}&novo_status=${encodeURIComponent(novoStatus)}`,
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       const id = btn.dataset.id;
 
-      fetch(`../logica/controladores/buscar_tarefa.php?id=${id}`)
+      fetch(`buscar_tarefa.php?id=${id}`)
         .then((res) => res.json())
         .then((tarefa) => {
           if (tarefa.erro) return alert("Erro ao carregar dados.");
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const id = btn.dataset.id;
       if (!confirm("Tem certeza que deseja excluir esta tarefa?")) return;
 
-      fetch("../logica/controladores/excluir_tarefa.php", {
+      fetch("excluir_tarefa.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: `id_tarefa=${encodeURIComponent(id)}`,

@@ -27,7 +27,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssisi", $titulo, $criticidade, $responsavel_id, $justificativa_gestor, $id_tarefa);
 
 if ($stmt->execute()) {
-    header("Location: ../../telas/solicitacoes.php?avaliacao=sucesso");
+    header("Location: ../solicitacoes/solicitacoes.php?avaliacao=sucesso");
     exit;
 } else {
     echo "Erro ao aprovar a tarefa: " . $stmt->error;

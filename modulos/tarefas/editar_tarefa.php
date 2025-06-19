@@ -3,7 +3,7 @@ session_start();
 require_once '../../conexao/conexao.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: ../../telas/tarefas.php?erro=metodo');
+    header('Location: tela_tarefas.php?erro=metodo');
     exit;
 }
 
@@ -19,13 +19,13 @@ list($atribuido_para_tipo, $atribuido_para) = explode('_', $responsavel_id);
 $valido = $tarefa_id && $titulo && $responsavel_id && in_array($criticidade, ['Baixa', 'Média', 'Alta']);
 
 if (!$valido) {
-    header('Location: ../../telas/tarefas.php?erro=dados_invalidos');
+    header('Location: tela_tarefas.php?erro=dados_invalidos');
     exit;
 }
 
 // Se quiser garantir que o tipo está correto (opcional, mas recomendado)
 if (!in_array($atribuido_para_tipo, ['admin', 'funcionario'])) {
-    header('Location: ../../telas/tarefas.php?erro=tipo_invalido');
+    header('Location: tela_tarefas.php?erro=tipo_invalido');
     exit;
 }
 
@@ -66,8 +66,8 @@ $stmt->bind_param(
 );
 
 if ($stmt->execute()) {
-    header('Location: ../../telas/tarefas.php?edicao=sucesso');
+    header('Location: tela_tarefas.php?edicao=sucesso');
 } else {
-    header('Location: ../../telas/tarefas.php?erro=edicao_falhou');
+    header('Location: telas_tarefas.php?erro=edicao_falhou');
 }
 exit;

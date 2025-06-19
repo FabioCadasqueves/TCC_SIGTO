@@ -16,7 +16,7 @@
     <!-- Modal Editar Tarefa -->
     <div class="modal fade" id="modalEditarTarefa" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <form class="modal-content" method="POST" action="../logica/controladores/editar_tarefa.php">
+            <form class="modal-content" method="POST" action="editar_tarefa.php">
                 <div class="modal-header">
                     <h5 class="modal-title">Editar Tarefa</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>

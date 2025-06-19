@@ -15,7 +15,7 @@
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
         <li>
-            <a href="tarefas.php" class="nav-link text-white <?php if ($paginaAtual === 'tarefas') echo 'active'; ?>">
+            <a href="../../modulos/tarefas/tela_tarefas.php" class="nav-link text-white <?php if ($paginaAtual === 'tarefas') echo 'active'; ?>">
                 <i class="bi bi-list-task me-2"></i> Tarefas
             </a>
         </li>
@@ -27,7 +27,7 @@
                 </a>
             </li>-->
             <li>
-                <a href="funcionarios.php" class="nav-link text-white <?php if ($paginaAtual === 'funcionarios') echo 'active'; ?>">
+                <a href="../../modulos/funcionarios/tela_funcionarios.php" class="nav-link text-white <?php if ($paginaAtual === 'funcionarios') echo 'active'; ?>">
                     <i class="bi bi-person-badge-fill me-2"></i> Funcionários
                 </a>
             </li>
