@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['tipo_usuario'] = 'colaborador';
 
         // Redireciona para tela de tarefas
-        header('Location: ../modulos/tarefas/index.php');
+        header('Location: ../modulos/tarefas/tela_tarefas.php');
         exit;
     } else {
         // PIN incorreto ou usuário inativo
