@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * Remove acentos e converte para minúsculas
+ */
+function removerAcentos($texto)
+{
+    return preg_replace(
+        ['/[áàãâä]/u', '/[éèêë]/u', '/[íìîï]/u', '/[óòõôö]/u', '/[úùûü]/u', '/[ç]/u'],
+        ['a', 'e', 'i', 'o', 'u', 'c'],
+        mb_strtolower($texto, 'UTF-8')
+    );
+}
+
+/**
+ * Converte string para o formato de data brasileira (dd/mm/yyyy)
+ */
+function formatarDataBr($data)
+{
+    return date('d/m/Y', strtotime($data));
+}
+
+/**
+ * Retorna o nome capitalizado (tipo nome próprio)
+ */
+function capitalizarNome($nome)
+{
+    return ucwords(mb_strtolower($nome, 'UTF-8'));
+}
