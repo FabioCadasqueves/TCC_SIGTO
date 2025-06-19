@@ -42,7 +42,7 @@
 
         <?php if ($_SESSION['tipo_usuario'] === 'admin'): ?>
             <li>
-                <a href="solicitacoes.php" class="nav-link text-white <?php if ($paginaAtual === 'solicitacoes') echo 'active'; ?>">
+                <a href="../../modulos/solicitacoes/tela_solicitacoes.php" class="nav-link text-white <?php if ($paginaAtual === 'solicitacoes') echo 'active'; ?>">
                     <i class="bi bi-chat-left-dots-fill me-2"></i> Solicitações
                 </a>
             </li>
