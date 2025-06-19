@@ -32,7 +32,7 @@
                 </a>
             </li>
             <li>
-                <a href="equipes.php" class="nav-link text-white <?php if ($paginaAtual === 'equipes') echo 'active'; ?>">
+                <a href="../../modulos/equipes/tela_equipes.php" class="nav-link text-white <?php if ($paginaAtual === 'equipes') echo 'active'; ?>">
                     <i class="bi bi-people-fill me-2"></i> Equipes
                 </a>
             </li>
