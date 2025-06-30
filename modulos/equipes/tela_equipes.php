@@ -64,7 +64,7 @@ $paginaAtual = 'equipes';
                 ?>
                     <div class="col">
                         <div class="card border-0 shadow-sm h-100" style="background: #f8f9fc; border-left: 5px solid #0d6efd; transition: all 0.2s ease-in-out;">
-                            <div class="card-body py-3">
+                            <div class=" border shadow-sm card-body py-3">
                                 <div class="d-flex align-items-center gap-3 mb-3">
                                     <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
                                         <i class="bi bi-people-fill fs-4"></i>

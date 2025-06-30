@@ -7,8 +7,8 @@
 
     <div class="d-flex justify-content-center">
         <a href="/" class="d-flex align-items-center text-white text-decoration-none">
-            <img src="../arquivos/imagens/Logo.png" alt="Logo SIGTO" width="32" height="32">
-            <span class="fs-4 ms-2">SGTO</span>
+            <img src="../../componentes/menu/Logo.png" alt="Logo SIGTO" width="32" height="32">
+            <span class="fs-4 ms-2">SIGTO</span>
         </a>
     </div>
 
@@ -54,7 +54,7 @@
     <div class="dropdown">
         <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
             data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="../arquivos/imagens/User.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+            <img src="../../componentes/menu/User.jpg.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
             <strong>
                 <?= $_SESSION['admin_nome'] ?? $_SESSION['nome_usuario'] ?? 'Usuário' ?>
             </strong>
@@ -64,7 +64,7 @@
             <li>
                 <hr class="dropdown-divider">
             </li>
-            <li><a class="dropdown-item" href="../logica/controladores/logout.php">Sair</a></li>
+            <li><a class="dropdown-item" href="../../login/logout.php">Sair</a></li>
 
         </ul>
     </div>

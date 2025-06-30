@@ -37,7 +37,7 @@ require_once 'carregar_tarefas.php';
                         <div class="w-100 w-md-auto">
                             <h1 class="titulo-pagina">Tarefas</h1>
                         </div>
-                        <div class="d-flex gap-2 w-50 w-md-auto align-items-center">
+                        <div class="d-flex gap-2 align-items-center justify-content-end w-100">
                             <select class="form-select" id="filtroResponsavel">
                                 <?php if ($tipo_usuario === 'admin'): ?>
                                     <option value="todos" <?= ($filtro_usuario_id == 'todos') ? 'selected' : '' ?>>Todos</option>
@@ -63,7 +63,7 @@ require_once 'carregar_tarefas.php';
                 </div>
             </div>
 
-            <div class="d-none d-md-flex justify-content-end mb-3 mt-3 align-items-center gap-2">
+            <div class="d-flex justify-content-end mb-3 mt-3 align-items-center gap-2 flex-wrap">
 
                 <select class="form-select" id="filtroStatus" style="width: 160px;">
                     <option value="todos" <?= (($_GET['status'] ?? 'todos') === 'todos') ? 'selected' : '' ?>>Todos</option>
@@ -71,10 +71,10 @@ require_once 'carregar_tarefas.php';
                     <option value="Em andamento" <?= (($_GET['status'] ?? 'todos') === 'Em andamento') ? 'selected' : '' ?>>Em andamento</option>
                     <option value="Concluída" <?= (($_GET['status'] ?? 'todos') === 'Concluída') ? 'selected' : '' ?>>Concluídas</option>
                 </select>
-                <button class="btn btn-outline-secondary  btn-visualizacao" onclick="mudarVisualizacao('grade', this)" title="Visualizar em grade">
+                <button class="btn btn-outline-secondary  btn-visualizacao d-none d-md-inline-flex" onclick="mudarVisualizacao('grade', this)" title="Visualizar em grade">
                     <i class="bi bi-grid-3x3-gap-fill"></i>
                 </button>
-                <button class="btn btn-outline-secondary btn-visualizacao" onclick="mudarVisualizacao('lista', this)" title="Visualizar em lista">
+                <button class="btn btn-outline-secondary btn-visualizacao d-none d-md-inline-flex" onclick="mudarVisualizacao('lista', this)" title="Visualizar em lista">
                     <i class="bi bi-list-ul"></i>
                 </button>
             </div>
@@ -110,7 +110,8 @@ require_once 'carregar_tarefas.php';
                             </span>
 
                             <!-- Título -->
-                            <h6 class="fw-bold"><?= htmlspecialchars($tarefa['descricao']) ?></h6>
+                            <h6 class="titulo-tarefa mb-2"><?= htmlspecialchars($tarefa['descricao']) ?></h6>
+
 
                             <!-- Status e responsável -->
                             <div class="linha-badges ">
@@ -125,7 +126,7 @@ require_once 'carregar_tarefas.php';
                             </div>
 
                             <!-- Ações + status + nome em uma única linha -->
-                            <div class="acoes-bloco-container d-flex align-items-center ms-auto gap-4">
+                            <div class="acoes-bloco-container d-flex flex-wrap align-items-center gap-2 w-100">
                                 <span class="badge status-badge <?= $statusClass ?>"><?= $tarefa['status'] ?></span>
                                 <span class="responsavel"><?= htmlspecialchars($tarefa['usuario_nome'] ?? $tarefa['admin_nome'] ?? 'Não encontrado') ?></span>
 
